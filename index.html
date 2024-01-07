@@ -30,7 +30,7 @@
     <header class="row">
       <!-- place navbar here -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-        <div class="container-fluid">
+        <div class="container-fluid mx-5 my-1 px-0">
           <a class="navbar-brand abs" href="#">
             <svg
               class="nav-logo navbar-brand m-0 p-0"
@@ -58,7 +58,7 @@
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link btn-login"
                   href=""
                   data-bs-target="#myModal"
                   data-bs-toggle="modal"
@@ -82,11 +82,11 @@
                 />
               </div>
               <h3 class="card-subtitle">Both with ads, for $9.99/month.</h3>
-              <a href="#" class="btn">GET THEM BOTH</a>
+              <button class="btn">GET THEM BOTH</button>
             </div>
             <div class="card bg-transparent text-center m-2">
               <h6 class="card-title">DISNEY BUNDLE TRIO BASIC</h6>
-              <div class="card-body p-0">
+              <div class="card-body">
                 <img
                   src="./img/logos-2.png"
                   class="hd-logos"
@@ -94,14 +94,28 @@
                 />
               </div>
               <h3 class="card-subtitle">All with ads, for $14.99/month.</h3>
-              <a href="#" class="btn">GET ALL THREE</a>
+              <button class="btn">GET ALL THREE</button>
             </div>
           </div>
         </div>
-        <span class="hd-legal">Terms apply</span>
-        <span class="hd-signup">SIGN UP FOR HULU ONLY</span>
-        <h6>VIEW MORE PLANS</h6>
-        <div class="hd-arrow-down"></div>
+        <div class="hd-legal text-center">
+          <button>Terms apply</button>
+        </div>
+        <div class="hd-signup text-center mt-3">
+          <a href="#">SIGN UP FOR HULU ONLY</a>
+        </div>
+        <div class="text-center py-2">
+          <strong class="fs-6 fw-medium">VIEW MORE PLANS</strong>
+        </div>
+        <div class="hd-arrow-down text-center">
+          <button>
+            <div
+              class="btn-arw-down d-flex align-items-center justify-content-center"
+            >
+              <i class="bi bi-arrow-down"></i>
+            </div>
+          </button>
+        </div>
       </div>
     </header>
     <main></main>

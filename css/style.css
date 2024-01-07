@@ -14,6 +14,7 @@ body {
 }
 
 a {
+  color: #fff;
   text-decoration: none;
 }
 
@@ -24,24 +25,48 @@ ul {
   padding: 0;
 }
 
+button {
+  height: 48px;
+}
+
+nav {
+  height: 74px;
+}
+
 .nav-logo {
   fill: #1ce783;
   width: 61px;
   height: 24px;
 }
 
-.nav-toggle-btn {
-  background-color: #424957;
-  padding: 12px 16px;
+.btn-login {
+  padding: 4px 12px !important;
+  border-radius: 10%;
+  background-color: transparent;
+  transition: background-color 0.5s;
 }
-.nav-toggle-btn i {
+
+.btn-login:hover {
+  background-color: #424957;
+}
+
+.navbar-toggler {
+  background-color: #424957;
+  color: #fff;
+}
+.navbar-toggler span {
   color: #fff;
 }
 
-.header-cards {
-  background-color: green;
-  border: 1px solid aqua;
+header {
+  height: 670px;
+  background: url(../img/original.jpg) no-repeat center center/cover;
 }
+
+.header-content {
+  padding-top: 60px;
+}
+
 @media screen and (min-width: 768px) {
   .header-cards {
     width: 670px;
@@ -64,6 +89,7 @@ ul {
 .header-cards .card .card-title {
   color: #1ce783;
   font-size: 12px;
+  margin: 8px;
 }
 .header-cards .card .card-body {
   padding: 0;
@@ -84,6 +110,7 @@ ul {
   }
 }
 .header-cards .card .card-subtitle {
+  margin: 18px;
   color: #fff;
   font-weight: 500;
 }
@@ -102,4 +129,32 @@ ul {
   color: #272c34;
   font-size: 14px;
   font-weight: bold;
+}
+
+.hd-legal button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.hd-signup a {
+  text-decoration: underline;
+}
+
+.hd-arrow-down button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 20px;
+}
+.hd-arrow-down button .btn-arw-down {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  height: 66px;
+  width: 66px;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

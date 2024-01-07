@@ -12,6 +12,13 @@ $color-secondery-3: #586174;
 $color-white: #fff;
 $font-primary: "Rubik", sans-serif;
 
+/// CUSTOM ELEMENTS
+@mixin custom-button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: $color-white;
+}
 /// STYLES
 // RESETTERS
 * {
@@ -27,6 +34,7 @@ body {
   overflow-x: hidden;
 }
 a {
+  color: $color-white;
   text-decoration: none;
 }
 ul {
@@ -35,20 +43,42 @@ ul {
   margin: 0;
   padding: 0;
 }
+button {
+  height: 48px;
+}
 // NAVBAR
+nav {
+  height: 74px;
+}
 .nav-logo {
   fill: $color-primary;
   width: 61px;
   height: 24px;
 }
-.nav-toggle-btn {
+.btn-login {
+  padding: 4px 12px !important;
+  border-radius: 10%;
+  background-color: transparent;
+  transition: background-color 0.5s;
+}
+.btn-login:hover {
   background-color: $color-secondery-2;
-  padding: 12px 16px;
-  i {
+}
+.navbar-toggler {
+  background-color: $color-secondery-2;
+  color: #fff;
+  span {
     color: $color-white;
   }
 }
 // HEADER
+header {
+  height: 670px;
+  background: url(../img/original.jpg) no-repeat center center / cover;
+}
+.header-content {
+  padding-top: 60px;
+}
 .header-cards {
   @include gt-sm {
     width: 670px;
@@ -59,14 +89,15 @@ ul {
   @include lt-sm {
     width: 90%;
   }
-  background-color: green;
-  border: 1px solid aqua;
+  //   background-color: green;
+  //   border: 1px solid aqua;
   .card {
     border: none;
     width: 320px;
     .card-title {
       color: $color-primary;
       font-size: 12px;
+      margin: 8px;
     }
     .card-body {
       padding: 0;
@@ -85,6 +116,7 @@ ul {
       }
     }
     .card-subtitle {
+      margin: 18px;
       color: $color-white;
       font-weight: 500;
       @include gt-sm {
@@ -102,6 +134,28 @@ ul {
     }
   }
 }
-
-.header-cards {
+.hd-legal {
+  button {
+    @include custom-button();
+    font-size: 12px;
+    text-decoration: underline;
+  }
+}
+.hd-signup {
+  a {
+    text-decoration: underline;
+  }
+}
+.hd-arrow-down {
+  button {
+    @include custom-button();
+    font-size: 20px;
+    .btn-arw-down {
+      border: 1px solid $color-white;
+      border-radius: 50%;
+      height: 66px;
+      width: 66px;
+      color: $color-white;
+    }
+  }
 }
