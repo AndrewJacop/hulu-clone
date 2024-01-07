@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Stream TV and Movies Live and Online | Hulu</title>
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -9,15 +9,14 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- Bootstrap CSS v5.3.2 -->
+    <!-- Bootstrap CSS v5.2.1 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-
-    <!-- Bootstrap Icons v1.3.0 -->
+    <!-- Option 1: Include in HTML -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
@@ -27,7 +26,7 @@
   </head>
 
   <body>
-    <header class="row">
+    <header>
       <!-- place navbar here -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div class="container-fluid">
@@ -70,32 +69,26 @@
         </div>
       </nav>
       <div class="header-content">
-        <div class="row justify-content-center">
-          <div class="header-cards d-flex justify-content-center">
-            <div class="card bg-transparent text-center m-2">
-              <h6 class="card-title">DISNEY BUNDLE DUO BASIC</h6>
-              <div class="card-body">
-                <img
-                  src="./img/logos-1.png"
-                  class="hd-logos"
-                  alt="hulu and disney logo"
-                />
-              </div>
-              <h3 class="card-subtitle">Both with ads, for $9.99/month.</h3>
-              <a href="#" class="btn">GET THEM BOTH</a>
-            </div>
-            <div class="card bg-transparent text-center m-2">
-              <h6 class="card-title">DISNEY BUNDLE TRIO BASIC</h6>
-              <div class="card-body p-0">
-                <img
-                  src="./img/logos-2.png"
-                  class="hd-logos"
-                  alt="hulu, disney and espn logo"
-                />
-              </div>
-              <h3 class="card-subtitle">All with ads, for $14.99/month.</h3>
-              <a href="#" class="btn">GET ALL THREE</a>
-            </div>
+        <div class="hd-cards-container">
+          <div class="hd-card">
+            <span>DISNEY BUNDLE DUO BASIC</span>
+            <img
+              src="./img/logos-1.png"
+              class="hd-logos"
+              alt="hulu and disney logo"
+            />
+            <span>Both with ads, for $9.99/month.</span>
+            <button>GET THEM BOTH</button>
+          </div>
+          <div class="hd-card">
+            <span>DISNEY BUNDLE TRIO BASIC</span>
+            <img
+              src="./img/logos-2.png"
+              class="hd-logos"
+              alt="hulu, disney and espn logo"
+            />
+            <span>All with ads, for $14.99/month.</span>
+            <button>GET ALL THREE</button>
           </div>
         </div>
         <span class="hd-legal">Terms apply</span>
@@ -120,7 +113,5 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-
-    <script src="./js/main.js"></script>
   </body>
 </html>
