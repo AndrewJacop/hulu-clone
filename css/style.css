@@ -7,7 +7,7 @@
 
 body {
   font-family: "Rubik", sans-serif;
-  background-color: #272c34;
+  background-color: #16181d;
   color: #fff;
   line-height: 1.7;
   overflow-x: hidden;
@@ -195,4 +195,22 @@ header {
   .build-plan .btn {
     padding: 0px 20px;
   }
+}
+
+.included-plan {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  background-color: #16181d;
+}
+.included-plan span {
+  font-size: 14px;
+  color: #1ce783;
+}
+.included-plan h2 {
+  font-size: 48px;
+  margin: 16px 0px;
+}
+.included-plan p {
+  font-size: 18px;
+  margin: 16px 0px;
 }/*# sourceMappingURL=style.css.map */

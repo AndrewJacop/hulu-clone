@@ -5,11 +5,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /// CONSTANTS
-$color-primary: #1ce783;
+$color-primary-1: #1ce783;
+$color-primary-2: #29a869;
 $color-secondery-1: #272c34;
 $color-secondery-2: #424957;
 $color-secondery-3: #586174;
 $color-white: #fff;
+$color-black: #16181d;
 $font-primary: "Rubik", sans-serif;
 
 /// CUSTOM ELEMENTS
@@ -28,7 +30,7 @@ $font-primary: "Rubik", sans-serif;
 }
 body {
   font-family: $font-primary;
-  background-color: $color-secondery-1;
+  background-color: $color-black;
   color: $color-white;
   line-height: 1.7;
   overflow-x: hidden;
@@ -46,12 +48,12 @@ ul {
 button {
   height: 48px;
 }
-// NAVBAR
+// NAVIGATION BAR
 nav {
   height: 74px;
 }
 .nav-logo {
-  fill: $color-primary;
+  fill: $color-primary-1;
   width: 61px;
   height: 24px;
 }
@@ -71,7 +73,7 @@ nav {
     color: $color-white;
   }
 }
-// HEADER
+// HEADER SECTION
 header {
   height: 670px;
   background: url(../img/original.jpg) no-repeat center center / cover;
@@ -95,7 +97,7 @@ header {
     border: none;
     width: 320px;
     .card-title {
-      color: $color-primary;
+      color: $color-primary-1;
       font-size: 12px;
       margin: 8px;
     }
@@ -127,7 +129,7 @@ header {
       }
     }
     .btn {
-      background-color: $color-primary;
+      background-color: $color-primary-1;
       color: $color-secondery-1;
       font-size: 14px;
       font-weight: bold;
@@ -159,12 +161,16 @@ header {
     }
   }
 }
-// PLAN BUILD
+// PLAN BUILD SECTION
 .build-plan {
   text-align: center;
   height: auto;
   padding: 30px 0px;
-  background: linear-gradient(180deg, #29a869 0.66%, #16181d 99.34%);
+  background: linear-gradient(
+    180deg,
+    $color-primary-2 0.66%,
+    $color-black 99.34%
+  );
   .title {
     @include gt-sm {
       font-size: 18px;
@@ -188,3 +194,22 @@ header {
     }
   }
 }
+// INCLUDED SECTION
+.included-plan {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  background-color: $color-black;
+  span {
+    font-size: 14px;
+    color: $color-primary-1;
+  }
+  h2 {
+    font-size: 48px;
+    margin: 16px 0px;
+  }
+  p {
+    font-size: 18px;
+    margin: 16px 0px;
+  }
+}
+// MEDIA SECTION
