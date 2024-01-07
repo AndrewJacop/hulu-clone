@@ -159,3 +159,32 @@ header {
     }
   }
 }
+// PLAN BUILD
+.build-plan {
+  text-align: center;
+  height: auto;
+  padding: 30px 0px;
+  background: linear-gradient(180deg, #29a869 0.66%, #16181d 99.34%);
+  .title {
+    @include gt-sm {
+      font-size: 18px;
+    }
+    @include lt-md {
+      font-size: 16px;
+    }
+  }
+  .btn {
+    @include custom-button();
+    border: 2px solid $color-white;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 20px auto;
+    width: auto;
+    @include gt-sm {
+      padding: 0px 80px;
+    }
+    @include lt-md {
+      padding: 0px 20px;
+    }
+  }
+}
