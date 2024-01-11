@@ -4,6 +4,8 @@
 
 > This is an HTML, CSS & JavaScript. It is a clone of the Hulu homepage along with some homebrew streaming home and details page.
 
+Github Link: https://github.com/AndrewJacop/hulu-clone
+
 This project include a lot of experimental features and technologies for a Front End Beginner Developer
 
 - I used pure CSS3 for the Stream and Movie page
