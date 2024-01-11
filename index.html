@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
     <!-- Bootstrap CSS v5.3.2 -->
@@ -22,19 +22,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
-
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- My Styles -->
+    <link rel="stylesheet" href="./css/w-style.css" />
   </head>
 
   <body>
-    <header class="row">
+    <header class="my-header row">
       <!-- NAVIGATION BAR -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+      <nav class="my-nav navbar navbar-expand-lg navbar-dark bg-transparent">
         <div class="container-fluid mx-5 my-1 px-0">
           <a class="navbar-brand abs" href="#">
             <svg
               class="nav-logo navbar-brand m-0 p-0"
-              data-src="./img/logo.svg"
+              data-src="./src/index-img/logo.svg"
               viewBox="0 -2 61 24"
               role="img"
               aria-labelledby="logoTitle"
@@ -77,7 +77,7 @@
               <h6 class="card-title">DISNEY BUNDLE DUO BASIC</h6>
               <div class="card-body">
                 <img
-                  src="./img/logos-1.png"
+                  src="./src/index-img/logos-1.png"
                   class="hd-logos"
                   alt="hulu and disney logo"
                 />
@@ -89,7 +89,7 @@
               <h6 class="card-title">DISNEY BUNDLE TRIO BASIC</h6>
               <div class="card-body">
                 <img
-                  src="./img/logos-2.png"
+                  src="./src/index-img/logos-2.png"
                   class="hd-logos"
                   alt="hulu, disney and espn logo"
                 />
@@ -140,7 +140,7 @@
           <div class="card text-bg-dark p-0 m-2">
             <div class="cover-grad"></div>
             <img
-              src="./img/cover-1.png"
+              src="./src/index-img/cover-1.png"
               class="card-img p-0"
               alt="dr who cover"
             />
@@ -152,7 +152,7 @@
           <div class="card text-bg-dark p-0 m-2">
             <div class="cover-grad"></div>
             <img
-              src="./img/cover-2.png"
+              src="./src/index-img/cover-2.png"
               class="card-img"
               alt="wakanda green cover"
             />
@@ -164,7 +164,7 @@
           <div class="card text-bg-dark p-0 m-2">
             <div class="cover-grad"></div>
             <img
-              src="./img/cover-3.png"
+              src="./src/index-img/cover-3.png"
               class="card-img"
               alt="family guy cover"
             />
@@ -176,7 +176,7 @@
           <div class="card text-bg-dark p-0 m-2">
             <div class="cover-grad"></div>
             <img
-              src="./img/cover-4.png"
+              src="./src/index-img/cover-4.png"
               class="card-img"
               alt="family guy cover"
             />
@@ -214,30 +214,51 @@
         <a href="#" class="channels">VIEW CHANNELS IN YOUR AREA →</a>
       </section>
       <!-- SLIDER SECTION -->
-      <section class="slider-section">
-        <div class="slider-content">
-          <h1>Live Sports</h1>
-          <p>
+      <section class="spotlights-tab">
+        <div class="tab-buttons">
+          <button class="active-tab tab-button">live sports</button>
+          <button class="tab-button">breaking news</button>
+          <button class="tab-button">biggest events</button>
+        </div>
+        <div class="tab-content">
+          <h1 class="content-title">Live Sports</h1>
+          <p class="content-desc">
             Catch your games at home or on the go. Stream live games from major
             college and pro leagues including the NCAA®, NBA, NHL, NFL, and
             more. Includes top local and national sports networks like ABC, CBS
             Sports Network, ESPN, FOX, FS1, TNT, NFL Network and more.
           </p>
-          <div class="slider-logos">
-            <div>
-              <img src="./img/live-sports-logo-1.png" />
-            </div>
-            <div>
-              <img src="./img/live-sports-logo-2.png" />
-            </div>
-            <div>
-              <img src="./img/live-sports-logo-3.svg" />
-            </div>
-            <div>
-              <img src="./img/live-sports-logo-4.png" />
-            </div>
+        </div>
+        <div class="logo-row">
+          <div>
+            <img
+              class="logo-row-img"
+              src="./src/index-img/live-sports-logo-1.png"
+            />
+          </div>
+          <div>
+            <img
+              class="logo-row-img"
+              src="./src/index-img/live-sports-logo-2.png"
+            />
+          </div>
+          <div>
+            <img
+              class="logo-row-img"
+              src="./src/index-img/live-sports-logo-3.svg"
+            />
+          </div>
+          <div>
+            <img
+              class="logo-row-img"
+              src="./src/index-img/live-sports-logo-4.png"
+            />
           </div>
         </div>
+        <p class="tab-disclaimer">
+          Live TV plan required. Regional restrictions, blackouts and additional
+          terms apply. <a href="#">See details</a>
+        </p>
       </section>
       <div class="select-plan-section row justify-content-center text-center">
         <div class="col-6 row justify-content-center text-center">
@@ -285,12 +306,376 @@
             />
             <label class="btn px-0" for="btnradio4">Live TV</label>
           </div>
-          <div class="sticky-bar"></div>
         </div>
       </div>
+      <!-- PLAN SELECTION -->
+      <section class="plan-selection-wrapper py-5">
+        <div
+          class="plans-wrapper d-flex flex-column align-content-center my-0 mx-auto w-75"
+        >
+          <div
+            class="plans-header w-100 d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center"
+          >
+            <div class="plans-selector d-flex align-items-center">
+              <div
+                class="plan d-flex align-items-center justify-content-center flex-column"
+              >
+                <h3>BASE PLANS</h3>
+                <img src="./src/index-img/images/hulu.png" alt="hulu" />
+              </div>
+              <div class="check-box">
+                <input type="checkbox" />
+              </div>
+              <div class="plan">
+                <h3>BUNDLE / SAVE</h3>
+                <img
+                  src="./src/index-img/images/hulu-dplus-espnplus.png"
+                  alt="hulu-dplus-espnplus"
+                />
+              </div>
+            </div>
+            <div
+              class="head-cards-wrapper d-flex justify-content-between align-items-center"
+            >
+              <div class="head-card most-popular">
+                <p class="head-card-eyebrow">30 Day free trial</p>
+                <h3 class="head-card-title">Hulu (With Ads)</h3>
+                <button class="head-card-pay-button w-100">
+                  $7.99 / MONTH
+                </button>
+              </div>
+              <div class="head-card">
+                <p class="head-card-eyebrow">30 Day free trial</p>
+                <h3 class="head-card-title">Hulu (No Ads)</h3>
+                <button class="head-card-pay-button">$17.99 / MONTH</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="plan-feature d-flex align-items-center justify-content-between w-100 py-2"
+          >
+            <p class="feature d-flex align-items-center">Monthly price</p>
+            <div
+              class="feature-availability-wrapper d-flex align-items-center justify-content-between"
+            >
+              <p class="feature-one text-center">$7.99/mo.</p>
+              <p class="feature-two text-center">$17.99/mo.</p>
+            </div>
+          </div>
+
+          <div
+            class="plan-feature d-flex align-items-center justify-content-between w-100 py-2"
+          >
+            <p class="feature d-flex align-items-center">
+              Streaming Library with tons of TV episodes and movies
+              <img src="./src/index-img/icons/Info_Icon_White.svg" />
+            </p>
+            <div
+              class="feature-availability-wrapper d-flex align-items-center justify-content-between"
+            >
+              <p class="feature-one text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+              <p class="feature-two text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="plan-feature d-flex align-items-center justify-content-between w-100 py-2"
+          >
+            <p class="feature">Most new episodes the day after they air†</p>
+            <div
+              class="feature-availability-wrapper d-flex align-items-center justify-content-between"
+            >
+              <p class="feature-one text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+              <p class="feature-two text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="plan-feature d-flex align-items-center justify-content-between w-100 py-2"
+          >
+            <p class="feature">Access to award-winning Hulu Originals</p>
+            <div
+              class="feature-availability-wrapper d-flex align-items-center justify-content-between"
+            >
+              <p class="feature-one text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+              <p class="feature-two text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="plan-feature d-flex align-items-center justify-content-between w-100 py-2"
+          >
+            <p class="feature">
+              Watch on your favorite devices, including TV, laptop, phone, or
+              tablet <img src="./src/index-img/icons/Info_Icon_White.svg" />
+            </p>
+            <div
+              class="feature-availability-wrapper d-flex align-items-center justify-content-between"
+            >
+              <p class="feature-one text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+              <p class="feature-two text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="plan-feature d-flex align-items-center justify-content-between w-100 py-2"
+          >
+            <p class="feature">
+              Streaming Library with tons of TV episodes and movies
+              <img src="./src/index-img/icons/Info_Icon_White.svg" />
+            </p>
+            <div
+              class="feature-availability-wrapper d-flex align-items-center justify-content-between"
+            >
+              <p class="feature-one text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+              <p class="feature-two text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="plan-feature d-flex align-items-center justify-content-between w-100 py-2"
+          >
+            <p class="feature">
+              No ads in streaming library<img
+                src="./src/index-img/icons/Info_Icon_White.svg"
+              />
+            </p>
+            <div
+              class="feature-availability-wrapper d-flex align-items-center justify-content-between"
+            >
+              <p class="feature-one text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+              <p class="feature-two text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="plan-feature d-flex align-items-center justify-content-between w-100 py-2"
+          >
+            <p class="feature">
+              Up to 6 user profiles <img
+              src="./src/index-img/icons/Info_Icon_White.svg"
+            </p>
+            <div
+              class="feature-availability-wrapper d-flex align-items-center justify-content-between"
+            >
+              <p class="feature-one text-center">—</p>
+              <p class="feature-two text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="plan-feature d-flex align-items-center justify-content-between w-100 py-2"
+          >
+            <p class="feature">Watch on 2 different screens at the same time</p>
+            <div
+              class="feature-availability-wrapper d-flex align-items-center justify-content-between"
+            >
+              <p class="feature-one text-center">—</p>
+              <p class="feature-two text-center">
+                <img
+                  loading="lazy"
+                  src="./src/index-img/icons/Pricing_Checkmark_green-light.svg"
+                  alt="✔"
+                />
+              </p>
+            </div>
+          </div>
+
+          <div class="plans-disclaimer pt-2">
+            <p>
+              †For current-season shows in the streaming library only **Switches
+              from Live TV to Hulu take effect as of the next billing cycle
+            </p>
+          </div>
+          <div
+            class="plans-footer w-100 d-flex align-items-center justify-content-center p-2"
+          >
+            <h2>Show Add-ons</h2>
+            <img src="./src/index-img/icons/Dropdown_Up_Arrow.svg" alt="🔻" />
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <!-- place footer here -->
+      <div
+        class="myfooter container-fluid w-75 d-flex flex-column align-items-center"
+      >
+        <div class="footer-site-links container-fluid row">
+          <div class="footer-section col">
+            <h3 class="footer-title">browse</h3>
+            <div class="footer-section-items-lists">
+              <div class="footer-section-item">Streaming Library</div>
+              <div class="footer-section-item">Live TV</div>
+              <div class="footer-section-item">Live News</div>
+              <div class="footer-section-item">Live Sports</div>
+            </div>
+          </div>
+          <div class="footer-section col">
+            <h3 class="footer-title"></h3>
+            <div class="footer-section-items-lists">
+              <div class="footer-section-item">TV Shows</div>
+              <div class="footer-section-item">Movies</div>
+              <div class="footer-section-item">Originals</div>
+              <div class="footer-section-item">Networks</div>
+              <div class="footer-section-item">Kids</div>
+              <div class="footer-section-item">FX</div>
+            </div>
+          </div>
+          <div class="footer-section col">
+            <h3 class="footer-title"></h3>
+            <div class="footer-section-items-lists">
+              <div class="footer-section-item">MAX</div>
+              <div class="footer-section-item">Cinemax</div>
+              <div class="footer-section-item">Showtime</div>
+              <div class="footer-section-item">STARZ</div>
+            </div>
+          </div>
+          <div class="footer-section col">
+            <h3 class="footer-title"></h3>
+            <div class="footer-section-items-lists">
+              <div class="footer-section-item">Disney Bundle Trio Basic</div>
+              <div class="footer-section-item">Disney Bundle Trie Premium</div>
+              <div class="footer-section-item">Disney Bundle Duo Basic</div>
+              <div class="footer-section-item">Accesibility</div>
+            </div>
+          </div>
+          <div class="footer-section col">
+            <h3 class="footer-title">help</h3>
+            <div class="footer-section-items-list">
+              <div class="footer-section-item">Account & Billing</div>
+              <div class="footer-section-item">Pricing &</div>
+              <div class="footer-section-item">MAX</div>
+              <div class="footer-section-item">MAX</div>
+            </div>
+          </div>
+          <div class="footer-section col">
+            <h3 class="footer-title">about us</h3>
+            <div class="footer-section-items-list">
+              <div class="footer-section-item">Shop Hulu</div>
+              <div class="footer-section-item">Press</div>
+              <div class="footer-section-item">Jobs</div>
+              <div class="footer-section-item">Contact</div>
+              <div class="footer-section-item">Guides | What to Watch</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-legal-links">
+          <ul class="footer-legal-links-left">
+            <li class="footer-section-item">
+              <img loading="lazy" src="./src/index-img/facebook.svg" alt="F" />
+            </li>
+            <li class="footer-section-item">
+              <img loading="lazy" src="./src/index-img/twitter.svg" alt="X" />
+            </li>
+            <li class="footer-section-item">
+              <img
+                loading="lazy"
+                src="./src/index-img/youtube.svg"
+                alt="Youtube"
+              />
+            </li>
+            <li class="footer-section-item">
+              <img
+                loading="lazy"
+                src="./src/index-img/instagram.svg"
+                alt="instagram"
+              />
+            </li>
+          </ul>
+          <div class="footer-legal-links-right">
+            <div class="footer-section-item">© 2024 Hulu, LLC</div>
+            <div class="footer-section-item">About Ads</div>
+            <div class="footer-section-item">Subscriber Agreement</div>
+            <div class="footer-section-item">Privacy Policy</div>
+            <div class="footer-section-item">
+              Do Not Sell or Share My Personal Information
+            </div>
+            <div class="footer-section-item">Your US State Privacy Rights</div>
+            <div class="footer-section-item">TV Parental Guidelines</div>
+            <div class="footer-section-item">Sitemap</div>
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script
@@ -298,13 +683,12 @@
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
     ></script>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-
-    <script src="./js/main.js"></script>
+    <!-- My Scripts -->
+    <script src="./js/w-script.js"></script>
   </body>
 </html>

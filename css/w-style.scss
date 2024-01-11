@@ -1,0 +1,696 @@
+/// IMPORTS
+// Partial Sass Files
+@use "media-queries.scss" as *;
+
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/// CONSTANTS
+$color-primary-1: #1ce783;
+$color-primary-2: #29a869;
+$color-secondery-1: #272c34;
+$color-secondery-2: #424957;
+$color-secondery-3: #586174;
+$color-white: #fff;
+$color-black: #16181d;
+$font-primary: "Rubik", sans-serif;
+
+/// CUSTOM ELEMENTS
+@mixin custom-button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: $color-white;
+}
+
+/// STYLES
+// RESETTERS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $font-primary;
+  background-color: $color-black;
+  color: $color-white;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+a {
+  color: $color-white;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+button {
+  height: 48px;
+}
+
+// NAVIGATION BAR
+.my-nav {
+  height: 74px;
+}
+.nav-logo {
+  fill: $color-primary-1;
+  width: 61px;
+  height: 24px;
+}
+.btn-login {
+  padding: 4px 12px !important;
+  border-radius: 10%;
+  background-color: transparent;
+  transition: background-color 0.5s;
+}
+.btn-login:hover {
+  background-color: $color-secondery-2;
+}
+.navbar-toggler {
+  background-color: $color-secondery-2;
+  color: #fff;
+  span {
+    color: $color-white;
+  }
+}
+// HEADER SECTION
+.my-header {
+  height: 670px;
+  background: url(../src/index-img/original.jpg) no-repeat center center / cover;
+}
+.header-content {
+  padding-top: 60px;
+}
+.header-cards {
+  @include gt-sm {
+    width: 670px;
+  }
+  @include sm {
+    width: 570px;
+  }
+  @include lt-sm {
+    width: 90%;
+  }
+  //   background-color: green;
+  //   border: 1px solid aqua;
+  .card {
+    border: none;
+    width: 320px;
+    .card-title {
+      color: $color-primary-1;
+      font-size: 12px;
+      margin: 8px;
+    }
+    .card-body {
+      padding: 0;
+      margin: 10px;
+      height: 60px;
+      width: 100%;
+      .hd-logos {
+        @include gt-sm {
+          height: 60px;
+          width: auto;
+        }
+        @include lt-md {
+          max-height: auto;
+          width: inherit;
+        }
+      }
+    }
+    .card-subtitle {
+      margin: 18px;
+      color: $color-white;
+      font-weight: 500;
+      @include gt-sm {
+        font-size: 24px;
+      }
+      @include lt-md {
+        font-size: 18px;
+      }
+    }
+    .btn {
+      background-color: $color-primary-1;
+      color: $color-secondery-1;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}
+.hd-legal {
+  button {
+    @include custom-button();
+    font-size: 12px;
+    text-decoration: underline;
+  }
+}
+.hd-signup {
+  a {
+    text-decoration: underline;
+  }
+}
+.hd-arrow-down {
+  button {
+    @include custom-button();
+    font-size: 20px;
+    .btn-arw-down {
+      border: 1px solid $color-white;
+      border-radius: 50%;
+      height: 66px;
+      width: 66px;
+      color: $color-white;
+    }
+  }
+}
+// PLAN BUILD SECTION
+.build-plan {
+  text-align: center;
+  height: auto;
+  padding: 30px 0px;
+  background: linear-gradient(
+    180deg,
+    $color-primary-2 0.66%,
+    $color-black 99.34%
+  );
+  .title {
+    @include gt-sm {
+      font-size: 18px;
+    }
+    @include lt-md {
+      font-size: 16px;
+    }
+  }
+  .btn {
+    @include custom-button();
+    border: 2px solid $color-white;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 20px auto;
+    width: auto;
+    @include gt-sm {
+      padding: 0px 80px;
+    }
+    @include lt-md {
+      padding: 0px 20px;
+    }
+  }
+}
+// INCLUDED SECTION
+.plan-section {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  background-color: $color-black;
+  span {
+    font-size: 14px;
+    color: $color-primary-1;
+  }
+  h2 {
+    font-size: 48px;
+    margin: 16px 0px;
+  }
+  p {
+    font-size: 18px;
+    margin: 16px 0px;
+  }
+  .btn {
+    width: 300px;
+    background-color: $color-primary-1;
+    color: $color-secondery-1;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .legal-text {
+    color: rgba($color-white, $alpha: 0.7);
+    font-size: 10px;
+    a {
+      text-decoration: underline;
+    }
+  }
+  .channels {
+    text-decoration: underline;
+  }
+}
+// CATAGORIES SECTION
+.covers {
+  .card {
+    height: auto;
+    width: 310px;
+    border-radius: 10px;
+    .card-title,
+    .card-text {
+      margin-left: 10px;
+    }
+    .card-img {
+      border-radius: 10px;
+    }
+    transition: border 1s;
+    transition: opacity 0.5s;
+  }
+  .card:hover {
+    opacity: 0.7;
+    border: 3px solid $color-secondery-3;
+  }
+}
+.cover-grad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+      293.18deg,
+      rgba(0, 0, 0, 0.6) 4.58%,
+      transparent 69.61%
+    ),
+    -webkit-linear-gradient(65.5deg, rgba(0, 0, 0, 0.2) 4.71%, transparent
+          71.49%);
+  background: -moz-linear-gradient(
+      293.18deg,
+      rgba(0, 0, 0, 0.6) 4.58%,
+      transparent 69.61%
+    ),
+    -moz-linear-gradient(65.5deg, rgba(0, 0, 0, 0.2) 4.71%, transparent 71.49%);
+  background: linear-gradient(
+      156.82deg,
+      rgba(0, 0, 0, 0.6) 4.58%,
+      transparent 69.61%
+    ),
+    linear-gradient(24.5deg, rgba(0, 0, 0, 0.2) 4.71%, transparent 71.49%);
+}
+.prem-txt {
+  color: $color-secondery-3;
+  font-size: 10px;
+  text-align: end;
+  margin-right: 25%;
+}
+// SLIDER SECTION
+.slider-section {
+  background: url(../src/index-img/live-sports.jpg) no-repeat center center /
+    cover;
+  position: relative;
+  @include lt-md {
+    height: 780px;
+  }
+  @include md {
+    height: 1000px;
+  }
+  @include gt-md {
+    height: 800px;
+  }
+}
+.slider-content {
+  position: absolute;
+  top: 160px;
+  left: 180px;
+  max-width: 550px;
+}
+.slider-logos {
+  width: 300px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  div {
+    background: url("../src/index-img/network-logo-bg.png") no-repeat center
+      center / cover;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 40px;
+  }
+}
+// PLAN SELLECTION SECTION
+.select-plan-section {
+  span {
+    margin-top: 50px;
+    font-size: 48px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 18px;
+  }
+  .btn-group {
+    margin-top: 30px;
+    width: 400px;
+    background-color: $color-secondery-1;
+    border-radius: 50px;
+    .btn-check {
+      padding: 15px;
+      border-radius: 50%;
+      &:active {
+        --bs-btn-active-bg: $color-secondery-2 !important;
+        background-color: $color-secondery-2 !important;
+      }
+    }
+    .btn {
+      padding: 15px;
+      color: $color-white;
+      border-radius: 50px !important;
+      &:active {
+        background-color: $color-secondery-2 !important;
+      }
+    }
+  }
+}
+
+// SLIDER
+.spotlights-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  height: 100vh;
+  padding: 0px 150px;
+  background-color: $color-black;
+  background-image: url("../src/index-img/live-sports.jpg");
+  background-size: cover;
+  background-position: top;
+  box-shadow: inset 0 0 10rem 15rem rgba(0, 0, 0, 0.1);
+  @include lt-lg() {
+    padding: 0px 20px;
+    background: url("../src/index-img/live-sports-small.jpg") no-repeat center
+      center / cover;
+  }
+}
+
+.tab-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  gap: 16px;
+}
+
+.tab-button {
+  background-color: transparent;
+  border: 2px transparent;
+  border-radius: 4px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 250ms, color 250ms;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #fff6;
+  &:active {
+    opacity: 0.6;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.active-tab {
+  position: relative;
+  color: white;
+}
+
+.active-tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 100%;
+  background-color: white;
+}
+
+.tab-content {
+  max-width: 500px;
+  color: white;
+}
+
+.content-title {
+  color: white;
+  font-size: 3rem;
+}
+
+.content-desc {
+  font-size: 0.9rem;
+}
+
+.logo-row {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.logo-row-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.logo-row-img img {
+  width: 100%;
+}
+
+.tab-disclaimer {
+  text-align: center;
+  font-size: 0.6rem;
+  color: $color-secondery-3;
+}
+
+.tab-disclaimer a {
+  color: $color-secondery-3;
+}
+// FOOTER
+footer {
+  background-color: #e8eaed;
+  width: 100vw;
+}
+.myfooter {
+  padding: 50px 0 0 0;
+}
+
+.footer-site-links {
+  padding-bottom: 100px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-section {
+  font-size: 0.8rem;
+}
+
+.footer-title {
+  color: black;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1.1;
+}
+
+.footer-section-items-list {
+  color: #586174;
+  line-height: 25px;
+}
+
+.footer-section-item {
+  cursor: pointer;
+  color: #586174;
+}
+
+.footer-legal-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  padding: 30px 0;
+  gap: 15px;
+}
+
+.footer-legal-links-left,
+.footer-legal-links-right {
+  display: flex;
+  list-style: none;
+  gap: max(min(10%, 10px), 25px);
+}
+
+.footer-legal-links-right {
+  flex-wrap: wrap;
+  font-size: 0.7rem;
+  color: #586174;
+}
+
+// PLAN SELECTION
+.plan-selection-wrapper {
+  background-color: $color-black;
+}
+
+.plans-wrapper > * {
+  border-top: 1px solid rgba(194, 194, 194, 0.525);
+}
+
+.plans-header {
+  position: sticky;
+  margin-top: 40px;
+  padding: 60px 0 40px 0;
+  top: 0;
+  background-color: $color-black;
+  z-index: 1;
+}
+
+.plans-selector {
+  flex: 2;
+  gap: 15px;
+}
+
+.check-box {
+  transform: scale(2);
+  width: 50px;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  width: 25px;
+  height: 15px;
+  background: $color-secondery-3;
+  border-radius: 50px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.4s;
+  &:checked[type="checkbox"] {
+    background: $color-primary-1;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: 0.4s;
+  }
+  &:checked[type="checkbox"]::after {
+    left: 50%;
+  }
+}
+
+.plan {
+  width: 120px;
+  color: white;
+  h3 {
+    font-size: 0.9rem;
+  }
+  &:nth-child(1) img {
+    width: 50px;
+  }
+  &:nth-child(3) img {
+    width: 180px;
+  }
+}
+
+.head-cards-wrapper {
+  flex: 2;
+}
+
+.most-popular::before {
+  content: "MOST POPULAR";
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.55rem;
+  width: 35%;
+  padding: 8px 0;
+  background-color: $color-primary-2;
+  color: $color-black;
+  border-radius: 99999px;
+}
+
+.head-card {
+  position: relative;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  flex: 1;
+}
+
+.head-card-eyebrow {
+  color: darken($color-white, 20);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.head-card-title {
+  font-size: 1.1rem;
+}
+
+.head-card-pay-button {
+  padding: 10px 25px;
+  font-size: 0.9rem;
+  background-color: white;
+  color: black;
+  transition: all 0.25s ease-in-out;
+}
+
+.plan-feature {
+  color: white;
+}
+
+.feature {
+  gap: 5px;
+  flex: 2;
+}
+
+.feature,
+.feature-availability-wrapper {
+  font-size: 0.8rem;
+}
+
+.plan-feature .feature-availability-wrapper {
+  flex: 2;
+}
+
+.feature-one,
+.feature-two {
+  flex: 1;
+}
+
+.plans-disclaimer {
+  align-self: flex-start;
+  font-size: 0.6rem;
+  color: $color-secondery-3;
+  width: 100%;
+  p {
+    width: 300px;
+  }
+}
+
+.plans-footer {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.457);
+  gap: 10px;
+  cursor: pointer;
+  color: white;
+  h2 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  img {
+    transform: rotate(180deg);
+  }
+}
