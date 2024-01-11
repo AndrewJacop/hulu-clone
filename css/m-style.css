@@ -12,10 +12,10 @@
 :root {
   --main-color: #1ce783;
   --hover-color: #29a869;
-  --body-color: #272c34;
-  --container-color: #424957;
+  --body-color: #16181d;
+  --container-color: #272c34;
   --text-color: #fcfeff;
-  --secondery-color-1: #586174;
+  --secondery-color-1: #424957;
 }
 /* CUSTOM SELECTION COLOR */
 ::selection {

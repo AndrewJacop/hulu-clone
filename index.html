@@ -57,13 +57,14 @@
           <div class="navbar-collapse collapse" id="collapseNavbar">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a
-                  class="nav-link btn-login"
-                  href=""
-                  data-bs-target="#myModal"
+                <button
+                  type="button"
+                  class="btn nav-link btn-login"
+                  data-bs-target="#loginModal"
                   data-bs-toggle="modal"
-                  >LOG IN</a
                 >
+                  LOG IN
+                </button>
               </li>
             </ul>
           </div>
@@ -83,7 +84,13 @@
                 />
               </div>
               <h3 class="card-subtitle">Both with ads, for $9.99/month.</h3>
-              <button class="btn">GET THEM BOTH</button>
+              <button
+                class="btn"
+                data-bs-toggle="modal"
+                data-bs-target="#signUpModal"
+              >
+                GET THEM BOTH
+              </button>
             </div>
             <div class="card bg-transparent text-center m-2">
               <h6 class="card-title">DISNEY BUNDLE TRIO BASIC</h6>
@@ -95,15 +102,29 @@
                 />
               </div>
               <h3 class="card-subtitle">All with ads, for $14.99/month.</h3>
-              <button class="btn">GET ALL THREE</button>
+              <button
+                class="btn"
+                data-bs-toggle="modal"
+                data-bs-target="#signUpModal"
+              >
+                GET ALL THREE
+              </button>
             </div>
           </div>
         </div>
         <div class="hd-legal text-center">
-          <button>Terms apply</button>
+          <button
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#legalModal"
+          >
+            Terms apply
+          </button>
         </div>
         <div class="hd-signup text-center mt-3">
-          <a href="#">SIGN UP FOR HULU ONLY</a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#signUpModal"
+            >SIGN UP FOR HULU ONLY</a
+          >
         </div>
         <div class="text-center py-2">
           <strong class="fs-6 fw-medium">VIEW MORE PLANS</strong>
@@ -113,7 +134,7 @@
             <div
               class="btn-arw-down d-flex align-items-center justify-content-center"
             >
-              <i class="bi bi-arrow-down"></i>
+              <a href="#plans"><i class="bi bi-arrow-down"></i></a>
             </div>
           </button>
         </div>
@@ -123,7 +144,7 @@
       <!-- BUILD PLAN SECTION -->
       <section class="row justify-content-center build-plan">
         <span class="title">BUILD THE PLAN THAT'S RIGHT FOR YOU</span>
-        <button class="btn">START BUILDING</button>
+        <button class="btn"><a href="#plans">START BUILDING</a></button>
       </section>
       <!-- INCLUDED SECTION -->
       <section class="row justify-content-center text-center plan-section">
@@ -137,7 +158,7 @@
       <!-- CATAGORIES SECTION -->
       <section class="row justify-content-center">
         <div class="covers row justify-content-center">
-          <div class="card text-bg-dark p-0 m-2">
+          <a href="./main-page.html" class="card text-bg-dark p-0 m-2">
             <div class="cover-grad"></div>
             <img
               src="./src/index-img/cover-1.png"
@@ -148,8 +169,8 @@
               <p class="card-text">Past & Current Seasons</p>
               <h5 class="card-title">TV Shows</h5>
             </div>
-          </div>
-          <div class="card text-bg-dark p-0 m-2">
+          </a>
+          <a href="./main-page.html" class="card text-bg-dark p-0 m-2">
             <div class="cover-grad"></div>
             <img
               src="./src/index-img/cover-2.png"
@@ -160,8 +181,8 @@
               <p class="card-text">New & Classic</p>
               <h5 class="card-title">Movies</h5>
             </div>
-          </div>
-          <div class="card text-bg-dark p-0 m-2">
+          </a>
+          <a href="./main-page.html" class="card text-bg-dark p-0 m-2">
             <div class="cover-grad"></div>
             <img
               src="./src/index-img/cover-3.png"
@@ -172,8 +193,8 @@
               <p class="card-text">Groundbreaking</p>
               <h5 class="card-title">Hulu Originals</h5>
             </div>
-          </div>
-          <div class="card text-bg-dark p-0 m-2">
+          </a>
+          <a href="./main-page.html" class="card text-bg-dark p-0 m-2">
             <div class="cover-grad"></div>
             <img
               src="./src/index-img/cover-4.png"
@@ -184,7 +205,7 @@
               <p class="card-text">Add-on</p>
               <h5 class="card-title">Premiums</h5>
             </div>
-          </div>
+          </a>
         </div>
         <div class="prem-txt">
           Premium network add-ons available for an additional cost
@@ -203,7 +224,15 @@
           months and fast-forward through your DVR content. Access endless
           entertainment with Disney+ and live sports with ESPN+.
         </p>
-        <div><button class="btn my-3">GET HULU + LIVE TV</button></div>
+        <div>
+          <button
+            class="btn my-3"
+            data-bs-toggle="modal"
+            data-bs-target="#signUpModal"
+          >
+            GET HULU + LIVE TV
+          </button>
+        </div>
         <div class="legal-text w-50 my-3">
           Hulu (With Ads) + Live TV plan only. $76.99/mo (or then-current,
           regular monthly price). Regional restrictions, blackouts and Live TV
@@ -309,7 +338,7 @@
         </div>
       </div>
       <!-- PLAN SELECTION -->
-      <section class="plan-selection-wrapper py-5">
+      <section class="plans plan-selection-wrapper py-5" id="plans">
         <div
           class="plans-wrapper d-flex flex-column align-content-center my-0 mx-auto w-75"
         >
@@ -673,6 +702,9 @@
             <div class="footer-section-item">Your US State Privacy Rights</div>
             <div class="footer-section-item">TV Parental Guidelines</div>
             <div class="footer-section-item">Sitemap</div>
+            <div class="footer-section-item">
+              &#169; A_J&#8482; All Rights Reserved
+            </div>
           </div>
         </div>
       </div>
@@ -688,7 +720,267 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- My Scripts -->
     <script src="./js/w-script.js"></script>
+
+    <!-- HIDDEN ELEMENTS -->
+    <!-- SIGNUP Modal -->
+    <div
+      class="my-modal modal fade"
+      id="signUpModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="signUpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="form-body modal-content">
+          <div class="row modal-body">
+            <div class="form-holder">
+              <div class="form-content">
+                <div class="form-items">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                  <h3>Register Today</h3>
+                  <p>Fill in the data below.</p>
+                  <form class="requires-validation" novalidate>
+                    <div class="col-md-12">
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="rName"
+                        placeholder="Full Name"
+                        required
+                      />
+                      <div class="valid-feedback">Username field is valid!</div>
+                      <div class="invalid-feedback">
+                        Username field cannot be blank!
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <input
+                        class="form-control"
+                        type="email"
+                        name="rEmail"
+                        placeholder="E-mail Address"
+                        required
+                      />
+                      <div class="valid-feedback">Email field is valid!</div>
+                      <div class="invalid-feedback">
+                        Email field cannot be blank!
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <input
+                        class="form-control"
+                        type="password"
+                        name="rPassword"
+                        placeholder="Password"
+                        required
+                      />
+                      <div class="valid-feedback">Password field is valid!</div>
+                      <div class="invalid-feedback">
+                        Password field cannot be blank!
+                      </div>
+                    </div>
+
+                    <div class="col-md-12 mt-3">
+                      <label class="mb-3 mr-1" for="gender">Gender: </label>
+
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="gender"
+                        id="male"
+                        autocomplete="off"
+                        required
+                      />
+                      <label class="btn btn-sm btn-outline-secondary" for="male"
+                        >Male</label
+                      >
+
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="gender"
+                        id="female"
+                        autocomplete="off"
+                        required
+                      />
+                      <label
+                        class="btn btn-sm btn-outline-secondary"
+                        for="female"
+                        >Female</label
+                      >
+
+                      <div class="valid-feedback mv-up">
+                        You selected a gender!
+                      </div>
+                      <div class="invalid-feedback mv-up">
+                        Please select a gender!
+                      </div>
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="invalidCheck"
+                        required
+                      />
+                      <label class="form-check-label mx-2">
+                        I confirm that all data are correct</label
+                      >
+                      <div class="invalid-feedback">
+                        Please confirm that the entered data are all correct!
+                      </div>
+                    </div>
+
+                    <div class="form-button mt-3">
+                      <button id="submit" type="submit" class="btn btn-primary">
+                        Register
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- LOGIN Modal -->
+    <div
+      class="my-modal modal fade"
+      id="loginModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="true"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="form-body modal-content">
+          <div class="row modal-body">
+            <div class="form-holder">
+              <div class="form-content">
+                <div class="form-items">
+                  <button
+                    type="button"
+                    class="btn-close btn-dark"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                  <h3>Log In</h3>
+                  <p>Fill in your E-mail and password.</p>
+                  <form class="requires-validation" novalidate>
+                    <div class="col-md-12">
+                      <div class="col-md-12">
+                        <input
+                          class="form-control"
+                          type="email"
+                          name="lEmail"
+                          placeholder="E-mail Address"
+                          required
+                        />
+                        <div class="valid-feedback">Email field is valid!</div>
+                        <div class="invalid-feedback">
+                          Email field cannot be blank!
+                        </div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <input
+                          class="form-control"
+                          type="password"
+                          name="lPassword"
+                          placeholder="Password"
+                          required
+                        />
+                        <div class="valid-feedback">
+                          Password field is valid!
+                        </div>
+                        <div class="invalid-feedback">
+                          Password field cannot be blank!
+                        </div>
+                      </div>
+
+                      <div class="mb-3 form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="saveCheck"
+                        />
+                        <label class="form-check-label mx-2" for="saveCheck"
+                          >Remember Me</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="form-button mt-3">
+                      <button id="submit" type="submit" class="btn btn-primary">
+                        Log in
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- LEGAL Modal -->
+    <div
+      class="modal fade"
+      id="legalModal"
+      data-bs-backdrop="static"
+      tabindex="-1"
+      aria-labelledby="legalModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg legalModal">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <p>
+              U.S. residents, 18+ only. Access content from each service
+              separately. Location data required to watch certain content.
+              Select Hulu content available via Disney+ with valid Hulu and
+              Disney+ subscriptions; additional content only available via Hulu
+              app. Hulu content can be streamed via Disney+ on up to 2 devices
+              simultaneously. Additional app feature and device restrictions
+              apply. For more information visit the Hulu Help Center. Offer
+              valid for eligible subscribers only. Subject to Hulu Subscriber
+              Agreement.
+            </p>
+            <p>
+              For detailed information on billing and cancelation, please visit
+              the Hulu Help Center.
+            </p>
+            <p>© 2023 Disney and its related entities</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
